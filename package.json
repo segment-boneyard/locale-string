@@ -1,0 +1,23 @@
+{
+  "name": "locale-string",
+  "version": "0.0.1",
+  "description": "Convert locale strings to english names and back",
+  "keywords": [],
+  "author": "Segment.io team@segment.io",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/segmentio/locale-string.git"
+  },
+  "dependencies": {
+    "country-list": "0.0.3",
+    "langs": "^1.0.0"
+  },
+  "devDependencies": {
+    "make-lint": "^1.0.1",
+    "mocha": "*"
+  },
+  "publishConfig": {
+    "registry": "https://segmentio.registry.nodejitsu.com"
+  },
+  "main": "index"
+}
