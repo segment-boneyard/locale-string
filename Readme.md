@@ -21,7 +21,7 @@ locale('English', 'United States'); // 'en-US'
 
 // or parse locale strings
 
-locale.parse('en-US'); // { language: 'English', country: 'United States' }
+locale.parse('en-CA'); // { language: 'English', country: 'Canada' }
 ```
 
 ## API
@@ -39,7 +39,7 @@ locale('English', 'United States'); // 'en-US'
   Returns an object containing the parsed language and country
 
 ```js
-locale.parse('en-CA'); // { language: 'English, country: 'Canada' }
+locale.parse('en-CA'); // { language: 'English', country: 'Canada' }
 ```
 
 ## License
