@@ -1,5 +1,7 @@
+include node_modules/make-lint/index.mk
+SRC = index.js
 
-test:
+test: lint
 	@./node_modules/.bin/mocha \
 		--reporter spec
 

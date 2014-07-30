@@ -16,8 +16,5 @@
     "make-lint": "^1.0.1",
     "mocha": "*"
   },
-  "publishConfig": {
-    "registry": "https://segmentio.registry.nodejitsu.com"
-  },
   "main": "index"
 }
