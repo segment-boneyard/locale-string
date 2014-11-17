@@ -16,6 +16,11 @@ describe('locale-string', function(){
     });
 
     it('should return a correct locale string', function(){
+      var res = locale('Finnish', undefined);
+      assert.equal(res, 'fi');
+    });
+
+    it('should return a correct locale string', function(){
       var res = locale('Italian', 'Italy');
       assert.equal(res, 'it-IT');
     });
@@ -36,6 +41,12 @@ describe('locale-string', function(){
       var res = locale.parse('it-IT');
       assert.equal(res.language, 'Italian');
       assert.equal(res.country, 'Italy');
+    });
+
+    it('should return a correct language but undefined country for a dashless string', function(){
+      var res = locale.parse('fi');
+      assert.equal(res.language, 'Finnish');
+      assert(res.country === undefined);
     });
 
     it('should return undefined for a bad string', function(){
