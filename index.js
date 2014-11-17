@@ -20,13 +20,17 @@ module.exports.parse = parse;
  */
 
 function stringify(language, country){
-  if (!language || !country) return;
+  if (!language) return;
   if (!langs.has('name', language)) return;
-  if (!countries.getCode(country)) return;
   // pair ISO 639-1 language code and ISO 3166-1-alpha-2 country code
   var langCode = langs.where('name', language)['1'];
-  var countryCode = countries.getCode(country);
-  return langCode + '-' + countryCode;
+  if (country) {
+    if (!countries.getCode(country)) return;
+    var countryCode = countries.getCode(country);
+    return langCode + '-' + countryCode;
+  } else {
+    return langCode;
+  }
 };
 
 /**
@@ -41,12 +45,19 @@ function stringify(language, country){
 function parse(string){
   var language = string.split('-')[0];
   var country = string.split('-')[1];
-  if (!language || !country) return;
+  if (!language) return;
   if (!langs.has('1', language)) return;
-  if (!countries.getName(country)) return;
-
-  return {
-    language: langs.where('1', language).name,
-    country: countries.getName(country)
-  };
+  
+  if (country) {
+    if (!countries.getName(country)) return;
+    
+    return {
+      language: langs.where('1', language).name,
+      country: countries.getName(country)
+    }
+  } else {
+    return {
+      language: langs.where('1', language).name
+    }
+  }
 }
