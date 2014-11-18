@@ -1,14 +1,16 @@
 
 # locale-string [![Build Status](https://circleci.com/gh/segmentio/locale-string/tree/master.png?style=badge)](https://circleci.com/gh/segmentio/locale-string/tree/master)
 
-  Convert locale strings to english names and back. Used with pairs of [ISO 639-1 language codes][language] and [ISO 3166-1-alpha-2][country] country codes.
+Convert locale strings to english names and back. Used with pairs of [ISO 639-1 language codes][language] and [ISO 3166-1-alpha-2][country] country codes.
 
 [language]: http://en.wikipedia.org/wiki/ISO_639-1
 [country]: http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
 
 ## Install
 
-    $ npm install locale-string
+```sh
+$ npm install locale-string
+```
 
 ## Usage
 
@@ -16,11 +18,9 @@
 var locale = require('locale-string');
 
 // convert from english words
-
 locale('English', 'United States'); // 'en-US'
 
 // or parse locale strings
-
 locale.parse('en-CA'); // { language: 'English', country: 'Canada' }
 ```
 
@@ -28,7 +28,7 @@ locale.parse('en-CA'); // { language: 'English', country: 'Canada' }
 
 ### locale-string(language, country)
 
-  Returns a locale string of the two letter language and country codes given their proper english names.
+Returns a locale string of the two letter language and country codes given their proper english names.
 
 ```js
 locale('English', 'United States'); // 'en-US'
@@ -36,7 +36,7 @@ locale('English', 'United States'); // 'en-US'
 
 ### .parse(locale)
 
-  Returns an object containing the parsed language and country
+Returns an object containing the parsed language and country
 
 ```js
 locale.parse('en-CA'); // { language: 'English', country: 'Canada' }
