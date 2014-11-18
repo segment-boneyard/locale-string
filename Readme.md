@@ -1,5 +1,5 @@
 
-# locale-string
+# locale-string [![Build Status](https://circleci.com/gh/segmentio/locale-string/tree/master.png?style=badge)](https://circleci.com/gh/segmentio/locale-string/tree/master)
 
   Convert locale strings to english names and back. Used with pairs of [ISO 639-1 language codes][language] and [ISO 3166-1-alpha-2][country] country codes.
 
