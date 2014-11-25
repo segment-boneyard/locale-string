@@ -1,6 +1,6 @@
 {
   "name": "locale-string",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Convert locale strings to english names and back",
   "keywords": [],
   "author": "Segment.io team@segment.io",
